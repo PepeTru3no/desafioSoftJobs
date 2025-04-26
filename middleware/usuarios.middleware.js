@@ -11,7 +11,7 @@ export const registerMiddleware = async (req, res, next) => {
     const { email, password, rol, lenguage } = req.body;
     let passCrypt;
     const url = req.url;
-    console.log(`Fecha de la consulta: ${new Date()}; URL consultada: ${url}; Datosrecibidas: `, req.body);
+    console.log(`Fecha de la consulta: ${new Date()}; URL consultada: ${url}; Datos recibidas: `, req.body);
     try {
 
         if (!email.trim() || !password.trim() ||
@@ -38,7 +38,7 @@ export const loginMiddleware = async (req, res, next) => {
     const { email, password } = req.body;
     let passCrypt;
     const url = req.url;
-    console.log(`Fecha de la consulta: ${new Date()}; URL consultada: ${url}; Datosrecibidas: `, req.body);
+    console.log(`Fecha de la consulta: ${new Date()}; URL consultada: ${url}; usuarioConsultado:  ${{email}}`);
     try {
 
         if (!email.trim() || !password.trim()) {
